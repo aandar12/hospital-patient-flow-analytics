@@ -50,18 +50,21 @@ The pipeline ingests streaming data, processes it in **Databricks (PySpark)**, a
 ---
 
 ## 📂 Project Structure
+```plaintext
 real-time-patient-flow-azure/
 │
-├── git_commands/ # Git Commands
-├── databricks-notebooks/ # Transformation notebooks
-│ ├── 01_bronze_rawdata.py
-│ ├── 02_silver_cleandata.py
-│ └── 03_gold_transform.py
-├── simulator/ # Data simulation scripts
-│ └── patient_flow_generator.py
-├── sqlpool-quries/ # SQL scripts for Synapse
-│ └── SQL_pool_quries.sql
-└── README.md # Project documentation
+├── CICD/                  # CI/CD pipeline scripts
+├── databricks-notebooks/  # Transformation notebooks
+│   ├── 01_bronze_rawdata.py
+│   ├── 02_silver_cleandata.py
+│   └── 03_gold_transform.py
+├── simulator/             # Data simulation scripts
+│   └── patient_flow_generator.py
+├── sqlpool-quries/        # SQL scripts for Synapse
+│   └── SQL_pool_quries.sql
+├── requirements.txt       # Dependencies
+└── README.md              # Project documentation
+```
 
 ---
 
