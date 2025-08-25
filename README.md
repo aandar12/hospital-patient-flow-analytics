@@ -1,6 +1,9 @@
 # Real-Time Patient Flow Analytics on Azure
 
 ![Azure](https://img.shields.io/badge/Azure-Cloud-blue?logo=microsoft-azure&style=flat-square)
+![PySpark](https://img.shields.io/badge/PySpark-Big%20Data-orange?logo=apache-spark&style=flat-square)
+![Azure Data Factory](https://img.shields.io/badge/Azure-Data%20Factory-blue?logo=microsoft-azure&style=flat-square)
+![Azure Synapse](https://img.shields.io/badge/Azure-Synapse%20Analytics-blue?logo=microsoft-azure&style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3.9+-yellow?logo=python&style=flat-square)
 ![Databricks](https://img.shields.io/badge/Databricks-PySpark-red?logo=databricks&style=flat-square)
 ![PowerBI](https://img.shields.io/badge/Power%20BI-Dashboard-orange?logo=power-bi&style=flat-square)
@@ -20,7 +23,7 @@
   - [2. Data Simulation](#2-data-simulation)
   - [3. Storage Setup](#3-storage-setup)
   - [4. Databricks Processing](#4-databricks-processing)
-  - [5. Synapse SQL Pool](#5-synapse-sql-pool))
+  - [5. Synapse SQL Pool](#5-synapse-sql-pool)
   - [6. Version Control](#6-version-control)
 - [✅ Key Outcomes](#-key-outcomes)
 - [📜 License](#-license)
@@ -30,6 +33,11 @@
 ## 📌 Project Overview
 This project demonstrates a **real-time data engineering pipeline** for healthcare, designed to analyze **patient flow across hospital departments** using Azure cloud services.  
 The pipeline ingests streaming data, processes it in **Databricks (PySpark)**, and stores it in **Azure Synapse SQL Pool** for analytics and visualization.
+
+## Pipeline
+
+<img width="4719" height="2432" alt="Architecture" src="https://github.com/user-attachments/assets/cb1a1775-ab64-45d7-b45b-50ba97660e1d" />
+
 
 ---
 
@@ -91,13 +99,12 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 ### **1. Event Hub Setup**
 - Created **Event Hub namespace** and **patient-flow hub**.
 - Configured **consumer groups** for Databricks streaming.
-- [Code reference: *Event Hub setup scripts in Azure Portal*]
 
 ---
 
 ### **2. Data Simulation**
 - Developed **Python script** `patient_flow_generator.py` to stream fake patient data (departments, wait time, discharge status) to Event Hub.
-- [Code reference: `simulator/patient_flow_generator.py`]
+- [Producer Code](simulator/patient_flow_generator.py)
 
 ---
 
@@ -108,23 +115,22 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 ---
 
 ### **4. Databricks Processing**
-- **Notebook 1** (`01_bronze_rawdata.py`): Reads Event Hub stream into Bronze.
-- **Notebook 2** (`02_silver_cleandata.py`): Cleans and validates schema.
-- **Notebook 3** (`03_gold_transform.py`): Aggregates and prepares star schema tables.
-- [Notebooks reference: `databricks-notebooks/`]
+- [**Notebook 1**](databricks-notebooks/01_bronze_rawdata.py): Reads Event Hub stream into Bronze.
+- [**Notebook 2**](databricks-notebooks/02_silver_cleandata.py): Cleans and validates schema.
+- [**Notebook 3** ](databricks-notebooks/03_gold_transform.py): Aggregates and prepares star schema tables.
 
 ---
 
 ### **5. Synapse SQL Pool**
 - Created **dedicated SQL Pool**.
 - Executed schema and fact/dimension creation queries from:
-  - `sqlpool-quries/SQL_pool_quries.sql`
+  - [DDL_Qureis](sqlpool-quries/SQL_pool_quries.sql)
 
 ---
 
 ### **6. Version Control**
 - Version control with **Git**:
-  - [Commands reference: `git_commands/`]
+  - [Commands reference](git_commands/git_bash)
 
 ---
 
@@ -142,5 +148,5 @@ Feel free to use and adapt for learning or production.
 ---
 
 **Author**: *Jaya Chandra Kadiveti* 
-**GitHub**: [username](https://github.com/Jay61616) 
+**LinkedIn**: [username](https://www.linkedin.com/in/jayachandrakadiveti/) 
 **Contact**: [Kadivetijayachandra@gmail.com](mailto:Kadivetijayachandra@gmail.com)
