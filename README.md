@@ -148,5 +148,7 @@ Feel free to use and adapt for learning or production.
 ---
 
 **Author**: *Jaya Chandra Kadiveti* 
+
 **LinkedIn**: [username](https://www.linkedin.com/in/jayachandrakadiveti/) 
+
 **Contact**: [Kadivetijayachandra@gmail.com](mailto:Kadivetijayachandra@gmail.com)
