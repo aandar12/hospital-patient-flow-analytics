@@ -25,6 +25,7 @@
   - [4. Databricks Processing](#4-databricks-processing)
   - [5. Synapse SQL Pool](#5-synapse-sql-pool)
   - [6. Version Control](#6-version-control)
+- [📊 Data Analytics](#-data-analytics)
 - [✅ Key Outcomes](#-key-outcomes)
 - [📜 License](#-license)
 
@@ -34,7 +35,10 @@
 This project demonstrates a **real-time data engineering pipeline** for healthcare, designed to analyze **patient flow across hospital departments** using Azure cloud services.  
 The pipeline ingests streaming data, processes it in **Databricks (PySpark)**, and stores it in **Azure Synapse SQL Pool** for analytics and visualization.
 
-For a full Youtube Tutorial of this project click this [link](https://youtu.be/01LVHch-1x0).
+**Part 1 – Data Engineering:** Build the real-time ingestion + transformation pipeline.  
+**Part 2 – Analytics:** Connect Synapse to Power BI and design an interactive dashboard for hospital KPIs.
+
+For a full Youtube Tutorial of this project click this [Part-1 link](https://youtu.be/01LVHch-1x0?si=x70zJDO8OlK-bYJk)/[Part-2 link](https://youtu.be/1esHP63zLtM?si=e-pK7EcpK7yEOAyP).
 
 ## Pipeline
 
@@ -138,10 +142,31 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 
 ---
 
+## 📊 Data Analytics
+
+Once the **data pipeline** was established and a **Star Schema** implemented in Synapse SQL Pool, the next step was to build an **interactive dashboard in Power BI**.  
+
+### **🔗 Synapse → Power BI Connection**
+- Connected **Azure Synapse SQL Pool** to Power BI using a direct SQL connection.  
+- Imported **FactPatientFlow** and **Dimension tables**.  
+- Established relationships for **Star Schema-based reporting**.  
+
+### **📈 Dashboard Features**
+The **Healthcare Patient Flow Dashboard** provides insights into:  
+- **Bed Occupancy Rate** by department and gender.  
+- **Patient Flow Trends** (admissions, wait times).  
+- **Department-Level KPIs** (length of stay, Total Patients).  
+- **Interactive Filters & Slicers** for gender.
+
+<img width="1282" height="724" alt="Screenshot 2025-08-30 155951" src="https://github.com/user-attachments/assets/cf1f84dc-c1a5-4f07-84aa-1658abb4db16" />
+
+---
+
 ## ✅ Key Outcomes
-- Real-time data ingestion and processing pipeline established.
-- Cleaned and structured data stored in **Synapse SQL Pool** for analytics.
-- Scalable architecture enabling integration with **Power BI** for dashboards.
+- **End-to-End Pipeline:** From **real-time ingestion → transformation → warehouse → analytics**.  
+- **Scalable Architecture:** Easily adaptable for different hospital datasets.  
+- **Business Insights:** Hospital admins can monitor **bed usage, patient flow, and department efficiency** in real time.  
+- **Portfolio Value:** Demonstrates both **Data Engineering** and **Analytics skills** in one project.  
 
 ---
 
