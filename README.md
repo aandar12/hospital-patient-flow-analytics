@@ -176,9 +176,9 @@ Feel free to use and adapt for learning or production.
 
 ---
 
-**Author**: *Jaya Chandra Kadiveti* 
+**Author**: *Adarsh Shetty Andar* 
 
-**LinkedIn**: [username](https://www.linkedin.com/in/jayachandrakadiveti/) 
+**LinkedIn**: [username](https://www.linkedin.com/in/https://www.linkedin.com/in/shettyadarsh122/) 
 
-**Contact**: [Kadivetijayachandra@gmail.com](mailto:Kadivetijayachandra@gmail.com)
+**Contact**: [a.shetty0796@gmail.com](mailto:adarshshetty0796@gmail.com)
 ## Owner: Adarsh Shetty
